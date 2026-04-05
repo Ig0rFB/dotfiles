@@ -15,6 +15,7 @@ vim.pack.add({
     'https://github.com/nvim-telescope/telescope.nvim',
     'https://github.com/debugloop/telescope-undo.nvim',
     'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
+    'https://github.com/echasnovski/mini.nvim',
 })
 
 
@@ -24,12 +25,13 @@ require ("common")
 require ("lua_line")
 require ("lsp_config")
 require ("telescope_setup")
+require ("starter")
 
 -- Space + f + c (Find Config)
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>fc', function()
     builtin.find_files({
-        prompt_title = "NVIM CONFIG FILES (DOTFILES)",
+        prompt_title = "Neovim Configuration",
         cwd = "$HOME/dotfiles/nvim",
     })
 end, { desc = "Find Nvim Dotfiles" })
