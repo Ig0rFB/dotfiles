@@ -1,0 +1,23 @@
+clipboard-read = allow
+background-opacity = 1
+background-blur = 14
+theme =	TokyoNight Storm
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 16
+font-thicken = true
+font-thicken-strength = 1
+#macos-icon = retro
+
+# cursor
+# cursor-color = #de2d26
+cursor-style = bar
+
+# macos
+macos-titlebar-style = transparent
+shell-integration = zsh
+
+# Force new tabs/windows to start at Home
+working-directory = home
+
+# Disable inheritance from the current window
+window-inherit-working-directory = false
