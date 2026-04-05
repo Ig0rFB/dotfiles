@@ -1,9 +1,18 @@
+-- ~/.config/nvim/lua/lua_line.lua
+
 require('lualine').setup ({
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    
+    -- NEW MINIMALIST VERSION (No Triangles)
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+
+    -- ORIGINAL VERSION (Commented out)
+    -- component_separators = { left = '>', right = '<' },
+    -- section_separators = { left = '', right = '' },
+    
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -18,7 +27,13 @@ require('lualine').setup ({
     }
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {
+        {
+            'mode',
+            -- Shortens 'NORMAL' to 'N', 'INSERT' to 'I', etc.
+            fmt = function(str) return str:sub(1, 1) end 
+        }
+    },
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {{'filename', path = 1 }},
     lualine_x = {'encoding', 'fileformat', 'filetype'},

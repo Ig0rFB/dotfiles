@@ -15,7 +15,7 @@ starter.setup({
     { name = "New File",     action = "enew | startinsert",   section = "Actions" },
     { name = "Find Text",    action = "Telescope live_grep",  section = "Actions" },
     { name = "Recent Files", action = "Telescope oldfiles",   section = "Actions" },
-    { name = "Config",       action = "Telescope find_files cwd=" .. vim.fn.expand("~/dotfiles/nvim"), section = "Actions" },
+    { name = "Configs",      action = "Telescope find_files cwd=" .. vim.fn.expand("~/dotfiles"), section = "Actions" },
     { name = "Mason",        action = "Mason",                section = "Actions" },
     { name = "Quit",         action = "qa",                   section = "Actions" },
     { name = "Git Status",   action = "Telescope git_status", section = "Actions" },
