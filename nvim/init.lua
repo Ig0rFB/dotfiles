@@ -32,6 +32,6 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>fc', function()
     builtin.find_files({
         prompt_title = "Neovim Configuration",
-        cwd = "$HOME/dotfiles/nvim",
+        cwd = vim.fn.expand("~/dotfiles/nvim"),
     })
 end, { desc = "Find Nvim Dotfiles" })

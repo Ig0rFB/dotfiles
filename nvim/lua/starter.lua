@@ -18,6 +18,7 @@ starter.setup({
     { name = "Config",       action = "Telescope find_files cwd=" .. vim.fn.expand("~/dotfiles/nvim"), section = "Actions" },
     { name = "Mason",        action = "Mason",                section = "Actions" },
     { name = "Quit",         action = "qa",                   section = "Actions" },
+    { name = "Git Status",   action = "Telescope git_status", section = "Actions" },
     -- This section adds your 5 most recent files automatically
     starter.sections.recent_files(5, false, false),
   },
