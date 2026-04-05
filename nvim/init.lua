@@ -19,6 +19,7 @@ vim.pack.add({
 
 
 -- Load my other config files
+require("remap")
 require ("common")
 require ("lua_line")
 require ("lsp_config")
