@@ -1,4 +1,4 @@
-# Dotfiles
+# README
 
 This repository contains my personal configuration files (dotfiles), managed and synchronized via a custom setup script.
 
