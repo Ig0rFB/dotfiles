@@ -1,5 +1,5 @@
 clipboard-read = allow
-background-opacity = 1
+background-opacity = 0.95
 background-blur = 14
 theme =	TokyoNight Storm
 font-family = JetBrainsMono Nerd Font Mono
