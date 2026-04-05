@@ -24,8 +24,3 @@ To sync your current changes or set up a new machine:
 ```bash
 ./install.sh
 ```
-
-## Setup on a New Machine
-
-1. Clone this repository to `~/dotfiles`.
-2. Run `./install.sh`.
