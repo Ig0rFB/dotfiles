@@ -12,10 +12,12 @@ This repository contains my personal configuration files (dotfiles), managed and
 
 The `install.sh` script performs the following actions:
 
-1.  **Migration**: If the config files exist in their default system locations but not in this folder, it moves them here.
-2.  **Symlinking**: It creates symbolic links from this directory back to the expected system locations (e.g., `~/.config/nvim`).
-3.  **Backup**: If a real file exists where a symlink should be, it creates a `.bak` copy before linking.
-4.  **Git Sync**: It automatically detects changes, commits them with a timestamped message, and attempts to push to GitHub.
+1.  **Bidirectional Syncing**:
+    - **From System to Dotfiles**: Any new `.lua` files created in `~/.config/nvim` are automatically moved to this repository and symlinked back.
+    - **From Dotfiles to System**: Any `.lua` files created directly in this repository are symlinked to `~/.config/nvim` so Neovim can use them.
+2.  **Ghostty Support**: Manages your Ghostty terminal configuration in the same way.
+3.  **Safety Backup**: If a real file exists where a symlink should be, it creates a `.bak` copy before linking.
+4.  **Git Sync**: It automatically detects changes, commits them with a timestamped message, and pushes them to GitHub.
 
 ## Usage
 
