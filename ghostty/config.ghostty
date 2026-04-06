@@ -7,7 +7,10 @@ font-size = 14
 font-thicken = true
 font-thicken-strength = 1
 #macos-icon = retro
-gtk-titlebar = false
+gtk-titlebar = true
+#gtk-titlebar-style = tabs
+#gtk-wide-tabs = false
+
 alpha-blending = native 
 
 # cursor
@@ -35,3 +38,6 @@ working-directory = home
 # Disable inheritance from the current window/tab
 window-inherit-working-directory = false
 tab-inherit-working-directory = false
+
+auto-update = check
+auto-update-channel = stable
