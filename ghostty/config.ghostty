@@ -1,6 +1,6 @@
 clipboard-read = allow
-background-opacity = 1
-background-blur = 14
+background-opacity = 0.98
+background-blur = 20
 theme =	TokyoNight Storm
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 14
@@ -8,22 +8,30 @@ font-thicken = true
 font-thicken-strength = 1
 #macos-icon = retro
 gtk-titlebar = false
+alpha-blending = native 
+
 # cursor
 # cursor-color = #de2d26
 cursor-style = block
 cursor-style-blink = false
 
 window-colorspace = display-p3
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 5
+window-padding-y = 1
+window-padding-color = extend
+
 
 # macos
 macos-titlebar-style = tabs
+macos-window-buttons = hidden
 shell-integration = zsh
+
+
 shell-integration-features = no-cursor  
 
 # Force new tabs/windows to start at Home
 working-directory = home
 
-# Disable inheritance from the current window
+# Disable inheritance from the current window/tab
 window-inherit-working-directory = false
+tab-inherit-working-directory = false
