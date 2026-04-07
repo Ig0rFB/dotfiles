@@ -23,7 +23,7 @@ The `install.sh` script performs the following actions:
 
 ## Usage
 
-To sync your current changes or set up a new machine:
+To sync your current changes to your dotfiles repository:
 
 ```bash
 ./install.sh
