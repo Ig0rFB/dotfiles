@@ -28,3 +28,9 @@ To sync your current changes to your dotfiles repository:
 ```bash
 ./install.sh
 ```
+
+### Adding New Configurations
+
+To add a new file or directory to the management script, update `install.sh` by:
+1.  Defining the target path in the **Configuration** section.
+2.  Adding a call to `setup_file_link "$SOURCE_PATH" "$DOTFILES_PATH"` in the main execution block.
