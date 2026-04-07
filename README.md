@@ -15,11 +15,10 @@ This repository contains my personal configuration files (dotfiles), managed and
 The `install.sh` script performs the following actions:
 
 1.  **Bidirectional Syncing**:
-    - **From System to Dotfiles**: New `.lua` files in `~/.config/nvim`, and configuration files for Claude (`~/.claude/CLAUDE.md`) and Gemini (`~/.gemini/GEMINI.md`), are automatically moved to this repository and symlinked back.
-    - **From Dotfiles to System**: Files in this repository are symlinked to their respective system locations.
-2.  **Ghostty Support**: Manages your Ghostty terminal configuration.
-3.  **Safety Backup**: If a real file exists where a symlink should be, it creates a `.bak` copy before linking.
-4.  **Git Sync**: It automatically detects changes, commits them with a timestamped message, and pushes them to GitHub.
+    - **From System to Dotfiles**: Any new configuration files created on your system (Neovim, Ghostty, Claude, Gemini) are automatically moved to this repository and symlinked back.
+    - **From Dotfiles to System**: Any existing or new configuration files in this repository are symlinked to their respective system locations.
+2.  **Safety Backup**: If a real file exists where a symlink should be, it creates a `.bak` copy before linking.
+3.  **Git Sync**: It automatically detects changes, commits them with a timestamped message, and pushes them to GitHub.
 
 ## Usage
 
