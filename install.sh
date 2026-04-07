@@ -5,6 +5,7 @@ DOTFILES_DIR="$HOME/dotfiles"
 NVIM_CONFIG_DIR="$HOME/.config/nvim"
 GHOSTTY_CONFIG="$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 CLAUDE_CONFIG="$HOME/.claude/CLAUDE.md"
+GEMINI_CONFIG="$HOME/.gemini/GEMINI.md"
 
 echo "Setting up dotfiles..."
 
@@ -73,7 +74,12 @@ if [ -f "$CLAUDE_CONFIG" ] || [ -f "$DOTFILES_DIR/claude/CLAUDE.md" ]; then
     setup_file_link "$CLAUDE_CONFIG" "$DOTFILES_DIR/claude/CLAUDE.md"
 fi
 
-# 4. Git Sync Function
+# 4. Setup Gemini
+if [ -f "$GEMINI_CONFIG" ] || [ -f "$DOTFILES_DIR/gemini/GEMINI.md" ]; then
+    setup_file_link "$GEMINI_CONFIG" "$DOTFILES_DIR/gemini/GEMINI.md"
+fi
+
+# 5. Git Sync Function
 sync_to_github() {
     echo "Checking for changes to sync to GitHub..."
     cd "$DOTFILES_DIR" || exit
