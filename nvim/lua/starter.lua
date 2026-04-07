@@ -24,3 +24,17 @@ starter.setup({
   },
   footer = "",
 })
+
+-- Add shortcut to go back to the starter page with a safety check for unsaved changes
+vim.keymap.set('n', '<leader>s', function()
+  if vim.bo.modified then
+    local choice = vim.fn.confirm("Save changes before going to Starter?", "&Yes\n&No\n&Cancel", 3)
+    if choice == 1 then -- Yes
+      vim.cmd("write")
+    elseif choice == 0 or choice == 3 then -- Cancel or Esc
+      return
+    end
+    -- If choice is 2 (No), we just proceed to open the starter
+  end
+  starter.open()
+end, { desc = "Go to Starter Page" })
